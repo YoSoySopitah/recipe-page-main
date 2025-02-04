@@ -1,3 +1,20 @@
+@font-face {
+    font-family: 'Young Serif';
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.woff2') format('woff2'),
+         url('assets/fonts/young-serif/YoungSerif-Regular.woff') format('woff'),
+         url('assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.woff2') format('woff2'),
+         url('assets/fonts/outfit/Outfit-VariableFont_wght.woff') format('woff'),
+         url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     background-color: #f3e5d8;
@@ -27,6 +44,7 @@ img {
 
 .preparation-bg{
     background-color: #fff7fc;
+    padding: 10px;
 }
 
 h1, h2, h3 {
@@ -45,12 +63,39 @@ h2 {
 
 ul, ol {
     padding-left: 20px;
+    color: #888481;
+}
+
+strong {
+    color: #555;
+}
+
+p {
+    color: #888481;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+    margin: 0px;
+
+}
+
+ul li::before {
+    content: '•';
+    color: hsl(14, 45%, 36%);
+    font-size: 22px;
+    margin-right: 10px;
 }
 
 ol {
     list-style: decimal;
 }
 
+.title h1{
+    color: black; 
+    font-weight: 100;
+}
 button {
     background-color: hsl(332, 51%, 32%);
     color: white;
@@ -62,6 +107,53 @@ button {
     transition: background 0.3s;
 }
 
+.nutrition-table {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #888481;
+    background-color: #fff7fc;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nutrition-table tr {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #e6e6e6;
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  
+  .nutrition-table th {
+    color: #555;
+    width: 50%;
+    text-align: start;
+  }
+  
+  .nutrition-table td {
+    width: 50%;
+    text-align: start;
+  }
+
+  .preparation-bg h2{
+    color: hsl(332, 51%, 32%);
+    font-family: sans-serif;
+    font-size: medium;
+    padding-left: 20px;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    padding: 10px;
+}
+
 button:hover {
     background-color: hsl(330, 100%, 98%);
     color: hsl(332, 51%, 32%);
@@ -69,9 +161,11 @@ button:hover {
 
 @media (max-width: 375px) {
     .container {
-        width: 95%;
+        width: 100%;
+        height: 100%;
         padding: 15px;
     }
+
 }
 
 .attribution {
